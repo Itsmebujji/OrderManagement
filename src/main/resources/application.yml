@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: OrderManagement
+server:
+  servlet:
+    context-path: /productService
+  port: 8081
+logging:
+  level:
+    web: info
