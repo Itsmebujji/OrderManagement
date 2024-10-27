@@ -20,5 +20,4 @@ public class Order {
     private int itemQuantity;
     private int itemPrice;
     private long totalPrice;
-
 }
