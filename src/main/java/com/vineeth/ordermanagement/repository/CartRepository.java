@@ -10,8 +10,8 @@ import java.util.List;
 @Repository
 public interface CartRepository extends JpaRepository<Cart, Integer> {
 
-    @Query(value = "SELECT * FROM cart WHERE customerId?=1 and itemId in ()")
-    List<Cart> findItemByIds(int customerId, List<Integer> ids);
+////    @Query(value = "SELECT * FROM cart")
+//    List<Cart> findItemByIds(int customerId, List<Integer> ids);
 
-    void deleteItemByIds(int customerId, List<Integer> ids);
+//    void deleteItemByIds(int customerId, List<Integer> ids);
 }

@@ -26,12 +26,12 @@ public class CartController {
         return cartService.addToCart(cart);
     }
 
-    @DeleteMapping({"/deleteCartItem/{customerId}","/deleteCartItems/{customerId}"})
-    public ResponseEntity<Object> deleteCartItem(@PathVariable(required = true) int customerId, @RequestBody(required = false) List<Integer> ids){
-        if(!ids.isEmpty()){
-            return cartService.deleteCartItems(customerId,ids);
-        }else{
-            return cartService.deleteCartItem(customerId);
-        }
-    }
+//    @DeleteMapping({"/deleteCartItem/{customerId}","/deleteCartItems/{customerId}"})
+//    public ResponseEntity<Object> deleteCartItem(@PathVariable(required = true) int customerId, @RequestBody(required = false) List<Integer> ids){
+//        if(!ids.isEmpty()){
+//            return cartService.deleteCartItems(customerId,ids);
+//        }else{
+//            return cartService.deleteCartItem(customerId);
+//        }
+//    }
 }

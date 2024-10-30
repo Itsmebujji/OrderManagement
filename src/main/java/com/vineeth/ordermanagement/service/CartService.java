@@ -57,26 +57,26 @@ public class CartService {
         }
     }
 
-    public ResponseEntity<Object> deleteCartItems(int customerId, List<Integer> ids) {
-        if(customerId!=0){
-            try{
-                List<Cart> cart = cartRepository.findItemByIds(customerId,ids);
-                if(cart!=null){
-                    cartRepository.deleteItemByIds(customerId,ids);
-                    return new ResponseEntity<>("Cart deleted successfully", HttpStatus.OK);
-                }
-                logger.info("Calling the request with invalid data");
-                return new ResponseEntity<>("Cart not found", HttpStatus.NOT_FOUND);
-            }catch (Exception e) {
-                logger.info("Error occurred while calling delete cart method: ${e}",e);
-                return new ResponseEntity<>("Cart not found", HttpStatus.NOT_FOUND);
-            }
-        }
-        logger.info("Calling the request with invalid data");
-        return new ResponseEntity<>("Cart not found", HttpStatus.NOT_FOUND);
-    }
+//    public ResponseEntity<Object> deleteCartItems(int customerId, List<Integer> ids) {
+//        if(customerId!=0){
+//            try{
+//                List<Cart> cart = cartRepository.findItemByIds(customerId,ids);
+//                if(cart!=null){
+//                    cartRepository.deleteItemByIds(customerId,ids);
+//                    return new ResponseEntity<>("Cart deleted successfully", HttpStatus.OK);
+//                }
+//                logger.info("Calling the request with invalid data");
+//                return new ResponseEntity<>("Cart not found", HttpStatus.NOT_FOUND);
+//            }catch (Exception e) {
+//                logger.info("Error occurred while calling delete cart method: ${e}",e);
+//                return new ResponseEntity<>("Cart not found", HttpStatus.NOT_FOUND);
+//            }
+//        }
+//        logger.info("Calling the request with invalid data");
+//        return new ResponseEntity<>("Cart not found", HttpStatus.NOT_FOUND);
+//    }
 
-    public ResponseEntity<Object> deleteCartItem(int customerId) {
-        return null;
-    }
+//    public ResponseEntity<Object> deleteCartItem(int customerId) {
+//        return null;
+//    }
 }
